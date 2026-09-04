@@ -191,32 +191,5 @@
       <span>© 2026 inrgNW</span>
     </div>
   </footer>
-
-  <script>
-    (() => {
-      const button = document.getElementById("emailButton");
-      const reveal = document.getElementById("emailReveal");
-
-      // The address is assembled only in the browser rather than included
-      // as a plain email string in the page HTML.
-      const parts = ["TBD", "inrgNW", "com"];
-      const email = parts[0] + "@" + parts[1] + "." + parts[2];
-
-      function showEmail() {
-        if (!reveal.textContent) {
-          const link = document.createElement("a");
-          link.href = "mailto:" + email;
-          link.textContent = email;
-          link.setAttribute("aria-label", "Email inrgNW");
-          reveal.appendChild(link);
-        }
-        button.setAttribute("aria-expanded", "true");
-      }
-
-      button.addEventListener("click", showEmail);
-      button.addEventListener("mouseenter", showEmail);
-      button.addEventListener("focus", showEmail);
-    })();
-  </script>
 </body>
 </html>
