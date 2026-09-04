@@ -1,6 +1,6 @@
 # inrgNW
 
-Simple static website for **inrgNW**, a Washington State energy management consulting business.
+inrgNW, a Washington State energy management consulting business.
 
 ## Files
 
