@@ -235,3 +235,110 @@ footer .brand { color: white; }
   .footer-wrap { width: calc(100% - 30px); flex-wrap: wrap; }
   .orca { right: 3%; bottom: 11%; width: 175px; opacity: .85; }
 }
+/* SERVICES / CARDS */
+
+.section {
+  width: min(1120px, calc(100% - 40px));
+  margin: auto;
+  padding: 25px 0 110px;
+}
+
+.section-heading {
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  max-width: 650px;
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  margin: 0 0 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  margin: 0 0 13px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+
+/* Three cards across on desktop */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* Individual card */
+.card {
+  padding: 30px;
+  min-height: 260px;
+  background: white;
+  border: 1px solid #e6e7df;
+  border-radius: 7px;
+  box-shadow: 0 8px 25px rgba(17, 46, 42, .04);
+}
+
+/* Card heading */
+.card h3 {
+  margin: 0 0 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+/* Card description */
+.card p {
+  color: #5d706c;
+  margin: 0;
+}
+
+/* Small circle at top of each card */
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dfe8e1;
+  color: #234d42;
+  font-weight: 800;
+  font-size: .72rem;
+  margin-bottom: 24px;
+}
+
+/* Optional sixth highlighted card */
+.card.featured {
+  background: #234d42;
+  color: white;
+}
+
+.card.featured p {
+  color: #d8e4df;
+}
+
+.card.featured .icon {
+  background: #496b61;
+  color: white;
+}
+
+
+/* TABLET */
+@media (max-width: 800px) {
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* PHONE */
+@media (max-width: 560px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
