@@ -229,5 +229,39 @@
       }
     });
   </script>
+<!-- Client-Side Content Protection -->
+<style>
+  /* Disable text highlighting across the page */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Block common inspect tool keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // F12
+    if (e.key === 'F12') {
+      e.preventDefault();
+    }
+    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Cmd on Mac)
+    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
+      e.preventDefault();
+    }
+    // Ctrl+U (View Source)
+    if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+      e.preventDefault();
+    }
+  });
+</script>
+  
 </body>
 </html>
