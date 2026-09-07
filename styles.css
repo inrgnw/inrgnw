@@ -107,24 +107,33 @@ nav a:hover { opacity: 1; }
 .primary:hover { filter: brightness(1.05); }
 .secondary { border: 1px solid rgba(255,255,255,.55); color: white; background: rgba(0,0,0,.08); }
 
-/* INTRO SECTION - Tighter spacing & distinct cream tint */
+/* INTRO SECTION - Gradient background transition */
 .intro {
-  background: var(--cream);
+  background: radial-gradient(circle at center, #f4f1e8 0%, #dfe8e1 100%);
   border-top: 1px solid rgba(17, 46, 42, 0.08);
   border-bottom: 1px solid rgba(17, 46, 42, 0.08);
-  padding: 40px 0;
+  padding: 55px 0;
+  position: relative;
 }
+
 .intro-content {
   width: min(850px, calc(100% - 40px));
   margin: auto;
   text-align: center;
 }
-.intro h2, .section-heading h2, .about h2, .cta h2, .contact h2 {
-  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
-  margin: 0 0 12px;
-}
-.intro p:last-child { color: var(--muted); font-size: 1.02rem; margin: 0; }
 
+.intro h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  margin: 0 0 14px;
+  color: var(--pine-dark);
+}
+
+.intro p:last-child {
+  color: var(--ink);
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.65;
+}
 /* SERVICES / CARDS SECTION - Tighter spacing */
 .section {
   width: min(1120px, calc(100% - 40px));
