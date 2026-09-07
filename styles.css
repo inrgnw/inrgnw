@@ -271,8 +271,6 @@ nav a:hover { opacity: 1; }
 .contact p:not(.eyebrow) { color: var(--muted); }
 .contact-card {
   background: var(--pine-dark); color: white; padding: 34px; border-radius: 7px; box-shadow: var(--shadow);
-}
-.contact-card > span {
   display: block; font-size: .72rem; letter-spacing: .15em; font-weight: 700; color: #b9cbc3;
   background: var(--pine-dark);
   color: white;
