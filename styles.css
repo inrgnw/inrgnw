@@ -263,7 +263,7 @@ footer .brand { color: white; }
   letter-spacing: .17em;
 }
 
-/* Three cards across on desktop */
+/* Five cards across on desktop */
 .cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -306,12 +306,6 @@ footer .brand { color: white; }
   font-weight: 800;
   font-size: .72rem;
   margin-bottom: 24px;
-}
-
-/* Optional sixth highlighted card */
-.card.featured {
-  background: #234d42;
-  color: white;
 }
 
 .card.featured p {
