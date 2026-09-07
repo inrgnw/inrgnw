@@ -39,7 +39,6 @@
       </div>
     </section>
 
-    <!-- Distinct background & tighter spacing -->
     <section class="intro">
       <div class="intro-content">
         <h2>Energy expertise with a Pacific Northwest perspective.</h2>
@@ -59,10 +58,8 @@
       </div>
 
       <div class="cards">
-
         <article class="card">
           <div class="icon">
-            <!-- Buildings / Clean Buildings Act -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
               <path d="M9 22v-4h6v4"></path>
@@ -78,7 +75,6 @@
 
         <article class="card">
           <div class="icon">
-            <!-- Growth Chart / Strategic Energy Management -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10"></line>
               <line x1="12" y1="20" x2="12" y2="4"></line>
@@ -96,7 +92,6 @@
 
         <article class="card">
           <div class="icon">
-            <!-- Clipboard Checklist / Capital Planning -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
               <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
@@ -113,7 +108,6 @@
 
         <article class="card">
           <div class="icon">
-            <!-- Magnifying Glass / Equipment Audits -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -129,7 +123,6 @@
 
         <article class="card">
           <div class="icon portfolio-manager">
-            <!-- Custom Blue Star/Building / ENERGY STAR Portfolio Manager -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 21h18"></path>
               <path d="M5 21V7l7-4 7 4v14"></path>
@@ -142,7 +135,6 @@
             using ENERGY STAR Portfolio Manager.
           </p>
         </article>
-
       </div>
     </section>
 
@@ -173,11 +165,12 @@
       </div>
     </section>
 
-    <section class="cta">
-      <p class="eyebrow">LET'S GET STARTED</p>
-      <h2>Have a building, a deadline, or an energy problem to solve? Let's start a conversation.</h2>
-      <p>Let's talk about what you're working on and where inrgNW can help. Use button to reveail our email address.</p>
-    </section>
+    <section id="contact" class="contact">
+      <div class="cta">
+        <p class="eyebrow">LET'S GET STARTED</p>
+        <h2>Have a building, a deadline, or an energy problem to solve? Let's start a conversation.</h2>
+        <p>Let's talk about what you're working on and where inrgNW can help. Use the button below to reveal our email address.</p>
+      </div>
 
       <div class="contact-card">
         <span>EMAIL</span>
@@ -200,12 +193,11 @@
     </div>
   </footer>
 
-  <!-- Email Reveal Handler -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const emailBtn = document.getElementById('emailButton');
       const emailContainer = document.getElementById('emailReveal');
-      const emailAddress = 'info@inrgnw.com'; // Adjust to your preferred email address
+      const emailAddress = 'info@inrgnw.com';
 
       function revealEmail() {
         if (!emailContainer.innerHTML) {
@@ -218,40 +210,16 @@
         emailBtn.addEventListener('mouseenter', revealEmail);
       }
     });
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12') { e.preventDefault(); }
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) { e.preventDefault(); }
+      if ((e.ctrlKey || e.metaKey) && e.key === 'u') { e.preventDefault(); }
+    });
   </script>
-<!-- Client-Side Content Protection -->
-<style>
-  /* Disable text highlighting across the page */
-  body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-</style>
-
-<script>
-  // Disable right-click context menu
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // Block common inspect tool keyboard shortcuts
-  document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.key === 'F12') {
-      e.preventDefault();
-    }
-    // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C (Cmd on Mac)
-    if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) {
-      e.preventDefault();
-    }
-    // Ctrl+U (View Source)
-    if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
-      e.preventDefault();
-    }
-  });
-</script>
-  
 </body>
 </html>
